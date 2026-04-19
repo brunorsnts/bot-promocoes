@@ -1,6 +1,8 @@
 export interface Deal {
-    titulo: string;
-    preco: string;
-    desconto: string;
-    link: string;
+    title: string;
+    price: number;
+    discountPercentage: number | null;
+    freeShipping: string | null;
+    store: string;
+    sourceUrl: string;
 }
