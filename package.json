@@ -1,0 +1,27 @@
+{
+  "name": "bot-promocoes",
+  "version": "1.0.0",
+  "description": "Bot WhatsApp que envia promoções do Pelando.com.br",
+  "homepage": "https://github.com/brunorsnts/bot-promocoes#readme",
+  "bugs": {
+    "url": "https://github.com/brunorsnts/bot-promocoes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunorsnts/bot-promocoes.git"
+  },
+  "license": "ISC",
+  "author": "Bruno Santos",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
