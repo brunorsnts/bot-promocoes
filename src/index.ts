@@ -1,8 +1,6 @@
-import { fetchDeals } from './scraper/pelando';
+import 'dotenv/config';
+import { client } from './whatsapp/client';
+import { scheduledTask } from './scheduler/scheduler';
 
-async function requisicaoGet() {
-    console.log(await fetchDeals());
-}
-
-
-requisicaoGet();
+client.initialize();
+scheduledTask.start();
