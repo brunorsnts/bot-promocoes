@@ -14,7 +14,7 @@ const api = axios.create({
 
 export async function fetchDeals(): Promise<Deal[]> {
     try {
-        const response = await api.get('feed/highlights?scenario=Main-Feed-Webmobile&limit=10&abFeedUserTermsPreference=b');
+        const response = await api.get('feed/v2/recents?limit=10&hideExpired=false&storeId=367');
         return response.data.data.deals
     } catch (error) {
         console.error("Erro ao buscar promoções:", error)
