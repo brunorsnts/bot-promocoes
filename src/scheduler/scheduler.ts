@@ -8,19 +8,13 @@ export const scheduledTask = schedule('0 * * * *', async () => {
     deals.map(d => d.sourceUrl = converteUrl(d.sourceUrl));
     const top5 = deals.slice(0,5);
     const id = process.env.WHATSAPP_GROUP_ID;
-
-    const message = top5
-                    .map(d => {
-                        return d.title 
+    
+    if (id != null) {
+        top5.map(d => client.sendMessage(id, d.title
                         + '\n' + 'Preço: R$'
                         + d.price
                         + '\n' + 'Link: '
-                        + d.sourceUrl;
-                    })
-                    .join('\n\n');
-    
-    if (id != null) {
-        client.sendMessage(id, message);
+                        + d.sourceUrl));
     }
 });
 
